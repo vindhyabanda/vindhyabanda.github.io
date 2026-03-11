@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vindhya Banda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">VB</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar bar-pink"></span>
+                <span class="bar bar-purple"></span>
+                <span class="bar bar-blue"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Vindhya Banda</h1>
+            <p class="hero-tagline">"I build before I spec, validate before I scale, and let customers drive what ships."</p>
+            <p class="hero-role">Product Manager II at Microsoft</p>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/vindhya-banda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com/vindhyabanda" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="mailto:vindhyabanda9@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>I'm a Product Manager at Microsoft with a passion for building products at the intersection of digital twins, IoT, AI, and industrial innovation. I currently lead product development for Microsoft Fabric's Digital Twin Builder — taking it from 0→1 to 348 active deployments at public preview — and drive Microsoft's OpenUSD partnership with NVIDIA, bringing real-time 3D visualization to industrial digital twin scenarios.</p>
+                    <p>My work spans managing 105+ TB of daily data egress across 481M connected IoT devices, designing cross-org integrations, and delivering features that impact billions of daily messages. I hold a BS in Computer Science from Purdue University and thrive on turning complex technical challenges into intuitive, customer-driven products at scale.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card fade-in">
+                        <h3>🎓 Education</h3>
+                        <h4>Purdue University</h4>
+                        <p>B.S. in Computer Science</p>
+                        <ul>
+                            <li>Certificate in Entrepreneurship and Innovation</li>
+                            <li>Dean's List (All Semesters)</li>
+                            <li>CS Corporate Scholars Award (2021)</li>
+                        </ul>
+                    </div>
+                    <div class="about-card fade-in">
+                        <h3>🛠️ Skills</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure AI</span>
+                            <span class="skill-tag">Azure IoT</span>
+                            <span class="skill-tag">REST API</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">ML</span>
+                            <span class="skill-tag">OpenUSD</span>
+                            <span class="skill-tag">3D Modeling</span>
+                            <span class="skill-tag">Agentic AI</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">NVIDIA Omniverse</span>
+                            <span class="skill-tag">IoT</span>
+                            <span class="skill-tag">OPC UA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Experience 1: PM II Microsoft -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker marker-pink"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Product Manager II</h3>
+                            <span class="timeline-company">Microsoft · Redmond, WA</span>
+                            <span class="timeline-date">Mar 2023 – Present</span>
+                        </div>
+
+                        <div class="experience-sub-block">
+                            <h4>Microsoft Fabric – Digital Twin Builder
+                                (<a href="https://www.youtube.com/watch?v=ceV3RsG946s?t=1h34m17s" target="_blank" rel="noopener noreferrer">Satya's Keynote Announcement</a>)</h4>
+                            <ul>
+                                <li><span class="arrow">→</span> Drove product development from 0→1, reaching 348 active deployments by public preview launch.</li>
+                                <li><span class="arrow">→</span> Architected and delivered Ontology Management and Import Ontology features, the primary integration surface for customers to connect bespoke industrial solutions and map domain models to live data in DTB.</li>
+                                <li><span class="arrow">→</span> Collaborated with UX team to design wireframes and validate usability through targeted studies. Built an AI workflow that reduced UX design and dev cycle from 14 to 3 days (80% reduction), led team-wide adoption.</li>
+                                <li><span class="arrow">→</span> Built an early-access SDK that accelerated pre-UX feedback loops and drove three major product pivots: broader ontology format support, non-linear user flows, and AI-powered bulk digital twin creation.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-sub-block">
+                            <h4>NVIDIA OpenUSD Partnership
+                                (<a href="https://www.sightmachine.com/press/sight-machine-integration-with-nvidia-omniverse" target="_blank" rel="noopener noreferrer">Customer Impact Story</a> |
+                                <a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/industry/Composable-Bindings-Simplified-System-Integration-Whitepaper.pdf" target="_blank" rel="noopener noreferrer">Whitepaper</a>)</h4>
+                            <ul>
+                                <li><span class="arrow">→</span> Developed a new OpenUSD 3D data-binding standard for industrial digital twin scenarios, enabling dynamic 3D scene updates triggered by real-time robot state changes.</li>
+                                <li><span class="arrow">→</span> Built the first publicly documented 3D digital twin integration with Microsoft Fabric, validated through customer deployments including Sight Machine, spanning manufacturing and healthcare scenarios.</li>
+                                <li><span class="arrow">→</span> Conferences:
+                                    <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62783/" target="_blank" rel="noopener noreferrer">GTC 2024</a>,
+                                    <a href="https://www.nvidia.com/en-us/on-demand/session/gtc25-dlit71322/" target="_blank" rel="noopener noreferrer">GTC 2025</a>,
+                                    <a href="https://ignite.microsoft.com/en-US/sessions/LABSP601" target="_blank" rel="noopener noreferrer">Ignite 2024</a>,
+                                    <a href="https://www.nvidia.com/en-us/events/microsoft-ignite" target="_blank" rel="noopener noreferrer">Ignite 2025</a>,
+                                    <a href="https://www.nvidia.com/en-us/on-demand/session/siggraph2024-sigg2404/" target="_blank" rel="noopener noreferrer">SIGGRAPH 2024</a>;
+                                    Press: <a href="https://blogs.nvidia.com/blog/openusd-advancements-gtc-developers/" target="_blank" rel="noopener noreferrer">"Groundbreaking OpenUSD Advancements..."</a>,
+                                    <a href="https://venturebeat.com/infrastructure/inside-microsoft-ignite-how-microsoft-and-nvidia-are-redefining-the-ai-stack" target="_blank" rel="noopener noreferrer">"How Microsoft and NVIDIA are redefining the AI stack"</a>.
+                                </li>
+                                <li><span class="arrow">→</span> Awarded the Azure E&amp;P Impact Award for exemplary performance in driving cross-org innovation.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-sub-block">
+                            <h4>Azure IoT Hub
+                                (<a href="https://www.microsoft.com/en/customers/story/22211-acwa-power-azure##section-block-body" target="_blank" rel="noopener noreferrer">Customer Impact Story</a>)</h4>
+                            <ul>
+                                <li><span class="arrow">→</span> Leading data egress routing strategy and connector development for IoT Hub, managing 105+ TB of daily egress across 481M connected devices. Driving development of the first native Fabric connector for IoT Hub.</li>
+                                <li><span class="arrow">→</span> Designed and implemented message schema change for IoT Hub, impacting 46K active Hubs processing 50B+ messages daily, eliminating data loss through retention of system properties.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2: PM Intern Microsoft -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker marker-yellow"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Product Manager Intern</h3>
+                            <span class="timeline-company">Microsoft, Azure IoT Hub Team · Redmond, WA</span>
+                            <span class="timeline-date">Jun 2022 – Aug 2022</span>
+                        </div>
+                        <ul>
+                            <li><span class="arrow">→</span> Built a rapid PoC enabling Azure connectivity with the SAME54 development board, unlocking over 1,300 use cases and serving as a template to make MikroE click boards Azure-ready.</li>
+                            <li><span class="arrow">→</span> Wrote models for telemetry parsing and published device driver code to ensure secure and fast data communication between MCU devices and Azure. Developed a sales playbook for the same.</li>
+                            <li><span class="arrow">→</span> Worked across teams to construct multiple application scenarios and vet sales playbooks for MCU Security. Collaborated with external stakeholders to identify 6 potential international customers.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3: SDE Intern AWS -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker marker-green"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Development Intern</h3>
+                            <span class="timeline-company">Amazon Web Services, CodeGuru Team · Seattle, WA</span>
+                            <span class="timeline-date">Sep 2021 – Dec 2021</span>
+                        </div>
+                        <ul>
+                            <li><span class="arrow">→</span> Improved Rules Management System to store DragonGlass rules and metadata in a serializable format.</li>
+                            <li><span class="arrow">→</span> Developed an adapter that deserializes read-in entries and serializes write-to entries for client interactions.</li>
+                            <li><span class="arrow">→</span> Collaborated cross-functionally with AWS CodeGuru Reviewer team to build requirements for designing a front end for the service. Developed mockups, PRD, and technical whitepaper.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4: SWE Intern Cisco -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker marker-blue"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="timeline-company">Cisco, Nexus Dashboard Orchestrator Team · San Jose, CA</span>
+                            <span class="timeline-date">Jun 2021 – Aug 2021</span>
+                        </div>
+                        <ul>
+                            <li><span class="arrow">→</span> Built a partner-facing pip-installable Python SDK for the Nexus Dashboard Orchestrator, enabling programmatic access to multi-site network policy orchestration and eliminating portal dependency for automation workflows.</li>
+                            <li><span class="arrow">→</span> Authored full developer documentation and test coverage for production readiness, and led enterprise adoption efforts across major clients, notably The Bosch Group.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in" style="--card-accent: #FFD6E0;">
+                    <div class="project-card-top"></div>
+                    <div class="project-card-body">
+                        <h3>Non-small Cell Lung Cancer Oncology Agent</h3>
+                        <p class="project-tech">Python · Azure AI · OpenAI · DICOM · FastAPI · Next.js</p>
+                        <ul>
+                            <li>Developed a multimodal AI platform for non-small cell lung cancer staging, integrating CT scans, histology images, and clinical notes to deliver interpretable TNM staging recommendations.</li>
+                            <li>Leveraged Microsoft's MedImageParse, GigaPath, and BioMed Parse models to unify NLP and computer vision insights, transforming hours of manual oncology review into minutes.</li>
+                            <li>Delivered a complete clinical workflow including case management, Tumor Board–ready PDF generation, and audit-tracked staging review pipelines.</li>
+                            <li>Pitched to Microsoft's Health &amp; Life Sciences division for potential integration into enterprise healthcare management partnerships.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" style="--card-accent: #CDEAC0;">
+                    <div class="project-card-top"></div>
+                    <div class="project-card-body">
+                        <h3>3D Real-Time Telemetry Scene Construction System</h3>
+                        <p class="project-tech">OpenUSD · GLTF · Python · Babylon.js</p>
+                        <ul>
+                            <li>Built a web app that dynamically constructs 3D scenes from real-time telemetry streams, enabling live digital twin visualization in the browser.</li>
+                            <li>Leveraged Babylon.js to implement lightweight rendering for streaming scene updates.</li>
+                            <li>Designed a custom data-binding GLTF schema to map telemetry endpoints to 3D scene objects, enabling seamless integration of live operational data into the visualization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" style="--card-accent: #CFE8FF;">
+                    <div class="project-card-top"></div>
+                    <div class="project-card-body">
+                        <h3>Azure Jumpstart Agora</h3>
+                        <p class="project-tech">Azure ML · Copilot · Predictive Analytics</p>
+                        <p class="project-link-note">
+                            <a href="https://jumpstart.azure.com/azure_jumpstart_ag/contoso_hypermarket/predictive_analytics" target="_blank" rel="noopener noreferrer">Demoed at Microsoft Ignite 2024 →</a>
+                        </p>
+                        <ul>
+                            <li>Developed a predictive analytics solution for demand forecasting using Azure ML and Copilot, analyzing historical inventory, transaction, and telemetry data to generate actionable supply predictions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Volunteering Section -->
+    <section class="section section-alt leadership" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership &amp; Volunteering</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card fade-in" style="--card-border: #FFD6E0;">
+                    <h3>Lead, Women &amp; Allies of Azure Edge ERG</h3>
+                    <span class="leadership-org">Microsoft · Redmond, WA</span>
+                    <span class="leadership-date">Present</span>
+                </div>
+
+                <div class="leadership-card fade-in" style="--card-border: #FFF3B0;">
+                    <h3>President, Undergraduate Student Board for CS, DS, AI</h3>
+                    <span class="leadership-org">Purdue University · West Lafayette, IN</span>
+                    <span class="leadership-date">2021 – 2022</span>
+                </div>
+
+                <div class="leadership-card fade-in" style="--card-border: #CDEAC0;">
+                    <h3>President, Girls Who Code</h3>
+                    <span class="leadership-org">Purdue University · West Lafayette, IN</span>
+                    <span class="leadership-date">2021 – 2022</span>
+                </div>
+
+                <div class="leadership-card fade-in" style="--card-border: #CFE8FF;">
+                    <h3>Undergraduate Teaching Assistant</h3>
+                    <span class="leadership-org">Purdue University · West Lafayette, IN</span>
+                    <span class="leadership-date">Aug 2021 – Dec 2021</span>
+                    <p>Facilitated learning for 150+ students by hosting office hours and leading weekly lab sessions for CS180 (OOP).</p>
+                </div>
+
+                <div class="leadership-card fade-in" style="--card-border: #E4D1FF;">
+                    <h3>Incubator Program Director</h3>
+                    <span class="leadership-org"><a href="https://www.nextgenleaders.io/" target="_blank" rel="noopener noreferrer">NextGen Leaders</a> · Seattle, WA</span>
+                    <span class="leadership-date">May 2024 – Sep 2025</span>
+                    <p>Led an incubator and mentorship program for high school students focused on building startups in healthcare and productivity.</p>
+                </div>
+
+                <div class="leadership-card fade-in" style="--card-border: #FFD6E0;">
+                    <h3>SAT Tutor</h3>
+                    <span class="leadership-org"><a href="https://mindsmatterseattle.org/" target="_blank" rel="noopener noreferrer">Minds Matter Seattle</a> · Seattle, WA</span>
+                    <span class="leadership-date">Aug 2024 – Present</span>
+                    <p>Teach SAT preparation and support college readiness for high school students from underrepresented communities attending underfunded schools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-text">I'm always open to connecting — whether it's about product management, digital twins, IoT, AI, or just a great conversation. Let's chat!</p>
+            <div class="contact-buttons">
+                <a href="mailto:vindhyabanda9@gmail.com" class="btn btn-filled">Email Me</a>
+                <a href="https://www.linkedin.com/in/vindhya-banda/" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">LinkedIn</a>
+                <a href="https://github.com/vindhyabanda" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Vindhya Banda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
