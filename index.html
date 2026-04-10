@@ -47,6 +47,20 @@
                 </a>
             </div>
         </div>
+        <a href="#about" class="scroll-arrow" aria-label="Scroll down">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 14L18 24L28 14" stroke="url(#pastelGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                    <linearGradient id="pastelGrad" x1="8" y1="14" x2="28" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#FFD6E0"/>
+                        <stop offset="25%" stop-color="#FFF3B0"/>
+                        <stop offset="50%" stop-color="#CDEAC0"/>
+                        <stop offset="75%" stop-color="#CFE8FF"/>
+                        <stop offset="100%" stop-color="#E4D1FF"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </a>
     </section>
 
     <!-- About Section -->
@@ -55,8 +69,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text fade-in">
-                    <p>I'm a Product Manager at Microsoft with a passion for building products at the intersection of digital twins, IoT, AI, and industrial innovation. I currently lead product development for Microsoft Fabric's Digital Twin Builder, taking it from 0 to 1 to 348 active deployments at public preview, and drive Microsoft's OpenUSD partnership with NVIDIA, bringing real-time 3D visualization to industrial digital twin scenarios.</p>
-                    <p>My work spans managing 105+ TB of daily data egress across 481M connected IoT devices, designing cross-org integrations, and delivering features that impact billions of daily messages. I hold a BS in Computer Science from Purdue University and thrive on turning complex technical challenges into intuitive, customer-driven products at scale.</p>
+                    <p>I'm developing solutions that drive the next wave of industrial intelligence on Microsoft Fabric, with a special focus on building IoT and 3D systems that power insight from high-volume data. I'm passionate about fostering inclusive communities in tech, having led initiatives with Girls Who Code at Purdue and now the Women &amp; Allies of Azure Edge ERG at Microsoft.</p>
                 </div>
                 <div class="about-cards">
                     <div class="about-card fade-in">
@@ -77,23 +90,31 @@
                             <span class="skill-tag">C/C++</span>
                             <span class="skill-tag">JavaScript</span>
                             <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Docker</span>
                             <span class="skill-tag">AWS</span>
                             <span class="skill-tag">Azure AI</span>
-                            <span class="skill-tag">Azure IoT</span>
-                            <span class="skill-tag">REST API</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">ML</span>
+                            <span class="skill-tag">IoT</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">MCP</span>
+                            <span class="skill-tag">Copilot Studio</span>
+                            <span class="skill-tag">LLMs</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">NVIDIA Omniverse</span>
                             <span class="skill-tag">OpenUSD</span>
                             <span class="skill-tag">3D Modeling</span>
-                            <span class="skill-tag">Agentic AI</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Jira</span>
                             <span class="skill-tag">Git</span>
-                            <span class="skill-tag">NVIDIA Omniverse</span>
-                            <span class="skill-tag">IoT</span>
-                            <span class="skill-tag">OPC UA</span>
+                            <span class="skill-tag">GTM Strategy</span>
                         </div>
+                    </div>
+                </div>
+                <div class="linkedin-feed fade-in">
+                    <h3>Latest on LinkedIn</h3>
+                    <div class="linkedin-feed-row">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7445242086280499200?collapsed=1" height="628" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7435811870227427328?collapsed=1" height="628" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                     </div>
                 </div>
             </div>
@@ -149,11 +170,11 @@
                         </div>
 
                         <div class="experience-sub-block">
-                            <h4>Azure IoT Hub
-                                (<a href="https://www.microsoft.com/en/customers/story/22211-acwa-power-azure##section-block-body" target="_blank" rel="noopener noreferrer">Customer Impact Story</a>)</h4>
+                            <h4>Azure IoT Hub</h4>
                             <ul>
-                                <li><span class="arrow">→</span> Leading data egress routing strategy and connector development for IoT Hub, managing 105+ TB of daily egress across 481M connected devices. Driving development of the first native Fabric connector for IoT Hub.</li>
-                                <li><span class="arrow">→</span> Designed and implemented message schema change for IoT Hub, impacting 46K active Hubs processing 50B+ messages daily, eliminating data loss through retention of system properties.</li>
+                                <li><span class="arrow">→</span> Leading data egress routing strategy for IoT Hub, managing 105+ TB of daily egress across 481M devices.</li>
+                                <li><span class="arrow">→</span> Driving development of the first native Fabric real-time connector for IoT Hub, positioned for $15M ARR.</li>
+                                <li><span class="arrow">→</span> Designed and implemented IoT Hub routing schema update across 46K+ active hubs (50B+ msgs/day) to persist system properties, enabling device-level identity, lineage, and traceability in downstream analytics.</li>
                             </ul>
                         </div>
                     </div>
@@ -222,11 +243,15 @@
                     <div class="project-card-body">
                         <h3>Non-small Cell Lung Cancer Oncology Agent</h3>
                         <p class="project-tech">Python · Azure AI · OpenAI · DICOM · FastAPI · Next.js</p>
+                        <p class="project-link-note">
+                            <a href="https://drive.google.com/file/d/1dEzCvujmeFXRCf6EhJuPpBGI2Xt_FuRS/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Hackathon Demo →</a> |
+                            <a href="https://github.com/vindhyabanda/oncologyagent-mshls" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                        </p>
                         <ul>
-                            <li>Developed a multimodal AI platform for non-small cell lung cancer staging, integrating CT scans, histology images, and clinical notes to deliver interpretable TNM staging recommendations.</li>
-                            <li>Leveraged Microsoft's MedImageParse, GigaPath, and BioMed Parse models to unify NLP and computer vision insights, transforming hours of manual oncology review into minutes.</li>
-                            <li>Delivered a complete clinical workflow including case management, Tumor Board-ready PDF generation, and audit-tracked staging review pipelines.</li>
-                            <li>Pitched to Microsoft's Health &amp; Life Sciences division for potential integration into enterprise healthcare management partnerships.</li>
+                            <li>Architected a multimodal AI inference pipeline integrating CT scans (DICOM), histology slides, and unstructured clinical notes via FastAPI, orchestrating Microsoft's MedImageParse, GigaPath, and BioMed Parse models for unified NLP and computer vision analysis.</li>
+                            <li>Implemented interpretable TNM staging recommendations by fusing model outputs across imaging and clinical modalities, reducing manual oncology review time from hours to minutes.</li>
+                            <li>Built a full clinical workflow backend including case management APIs, audit-tracked staging review pipelines, and automated Tumor Board–ready PDF report generation via Next.js.</li>
+                            <li>Pitched to Microsoft's Health &amp; Life Sciences division for enterprise integration.</li>
                         </ul>
                     </div>
                 </div>
@@ -234,26 +259,14 @@
                 <div class="project-card fade-in" style="--card-accent: #CDEAC0;">
                     <div class="project-card-top"></div>
                     <div class="project-card-body">
-                        <h3>3D Real-Time Telemetry Scene Construction System</h3>
-                        <p class="project-tech">OpenUSD · GLTF · Python · Babylon.js</p>
-                        <ul>
-                            <li>Built a web app that dynamically constructs 3D scenes from real-time telemetry streams, enabling live digital twin visualization in the browser.</li>
-                            <li>Leveraged Babylon.js to implement lightweight rendering for streaming scene updates.</li>
-                            <li>Designed a custom data-binding GLTF schema to map telemetry endpoints to 3D scene objects, enabling seamless integration of live operational data into the visualization.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in" style="--card-accent: #CFE8FF;">
-                    <div class="project-card-top"></div>
-                    <div class="project-card-body">
                         <h3>Azure Jumpstart Agora</h3>
-                        <p class="project-tech">Azure ML · Copilot · Predictive Analytics</p>
+                        <p class="project-tech">Azure IoT Operations · Microsoft Fabric · Azure ML · Microsoft 365 Copilot</p>
                         <p class="project-link-note">
                             <a href="https://jumpstart.azure.com/azure_jumpstart_ag/contoso_hypermarket/predictive_analytics" target="_blank" rel="noopener noreferrer">Demoed at Microsoft Ignite 2024 →</a>
                         </p>
                         <ul>
-                            <li>Developed a predictive analytics solution for demand forecasting using Azure ML and Copilot, analyzing historical inventory, transaction, and telemetry data to generate actionable supply predictions.</li>
+                            <li>Built a predictive analytics solution for retail demand forecasting within the Contoso Hypermarket scenario, ingesting edge IoT telemetry, POS transaction history, and inventory data through an Azure IoT Operations and Microsoft Fabric edge-to-cloud pipeline.</li>
+                            <li>Integrated Azure ML forecasting models with Microsoft 365 Copilot to surface actionable supply predictions via natural language, enabling store managers to query inventory trends without writing queries.</li>
                         </ul>
                     </div>
                 </div>
