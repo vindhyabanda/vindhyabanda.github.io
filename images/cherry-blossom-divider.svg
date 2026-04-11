@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30">
+  <!-- Gentle curved branch -->
+  <path d="M10 16 C40 11, 70 13, 100 15 C130 17, 160 13, 190 16"
+        stroke="#96725A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Left twig -->
+  <path d="M45 13 C42 10, 40 8, 38 6"
+        stroke="#96725A" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Right twig -->
+  <path d="M155 14 C158 11, 160 9, 162 7"
+        stroke="#96725A" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+
+  <!-- FLOWER 1 (small, left) center at (45,13), petal offset 3 -->
+  <ellipse cx="45" cy="10" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(0 45 13)"/>
+  <ellipse cx="45" cy="10" rx="2" ry="3.5" fill="#F4A0C4" opacity="0.7" transform="rotate(72 45 13)"/>
+  <ellipse cx="45" cy="10" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(144 45 13)"/>
+  <ellipse cx="45" cy="10" rx="2" ry="3.5" fill="#F4A0C4" opacity="0.7" transform="rotate(216 45 13)"/>
+  <ellipse cx="45" cy="10" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(288 45 13)"/>
+  <circle cx="45" cy="13" r="1.5" fill="#FFEAB5"/>
+  <circle cx="44.5" cy="12.6" r="0.4" fill="#D4809E"/>
+  <circle cx="45.5" cy="13.2" r="0.35" fill="#D4809E"/>
+
+  <!-- FLOWER 2 (main, center) center at (100,15), petal offset 4 -->
+  <ellipse cx="100" cy="11" rx="2.8" ry="4.5" fill="#F9B4D2" opacity="0.85" transform="rotate(0 100 15)"/>
+  <ellipse cx="100" cy="11" rx="2.8" ry="4.5" fill="#F4A0C4" opacity="0.8" transform="rotate(72 100 15)"/>
+  <ellipse cx="100" cy="11" rx="2.8" ry="4.5" fill="#F9B4D2" opacity="0.85" transform="rotate(144 100 15)"/>
+  <ellipse cx="100" cy="11" rx="2.8" ry="4.5" fill="#F4A0C4" opacity="0.8" transform="rotate(216 100 15)"/>
+  <ellipse cx="100" cy="11" rx="2.8" ry="4.5" fill="#F9B4D2" opacity="0.85" transform="rotate(288 100 15)"/>
+  <circle cx="100" cy="15" r="2" fill="#FFEAB5"/>
+  <circle cx="99.2" cy="14.4" r="0.5" fill="#D4809E"/>
+  <circle cx="100.8" cy="14.8" r="0.5" fill="#D4809E"/>
+  <circle cx="100" cy="15.6" r="0.4" fill="#D4809E"/>
+
+  <!-- FLOWER 3 (small, right) center at (155,14), petal offset 3 -->
+  <ellipse cx="155" cy="11" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(0 155 14)"/>
+  <ellipse cx="155" cy="11" rx="2" ry="3.5" fill="#F4A0C4" opacity="0.7" transform="rotate(72 155 14)"/>
+  <ellipse cx="155" cy="11" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(144 155 14)"/>
+  <ellipse cx="155" cy="11" rx="2" ry="3.5" fill="#F4A0C4" opacity="0.7" transform="rotate(216 155 14)"/>
+  <ellipse cx="155" cy="11" rx="2" ry="3.5" fill="#F9B4D2" opacity="0.75" transform="rotate(288 155 14)"/>
+  <circle cx="155" cy="14" r="1.5" fill="#FFEAB5"/>
+  <circle cx="154.5" cy="13.6" r="0.4" fill="#D4809E"/>
+  <circle cx="155.5" cy="14.2" r="0.35" fill="#D4809E"/>
+
+  <!-- Small leaves at twigs -->
+  <ellipse cx="38" cy="7" rx="3" ry="1.5" fill="#A8DDA0" opacity="0.5" transform="rotate(-35 38 7)"/>
+  <ellipse cx="162" cy="8" rx="3" ry="1.5" fill="#A8DDA0" opacity="0.5" transform="rotate(30 162 8)"/>
+
+  <!-- Loose falling petals -->
+  <ellipse cx="72" cy="5" rx="1.5" ry="2.5" fill="#F9B4D2" opacity="0.4" transform="rotate(-20 72 5)"/>
+  <ellipse cx="128" cy="25" rx="1.2" ry="2" fill="#F9B4D2" opacity="0.35" transform="rotate(35 128 25)"/>
+</svg>
