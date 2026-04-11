@@ -839,6 +839,17 @@ img {
     line-height: 1.6;
 }
 
+.leadership-link {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.leadership-link:hover {
+    color: var(--primary);
+}
+
 /* ===== CONTACT ===== */
 .contact {
     text-align: center;
@@ -893,6 +904,11 @@ img {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(209, 114, 155, 0.3);
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 48px;
 }
 
 /* ===== FOOTER ===== */
