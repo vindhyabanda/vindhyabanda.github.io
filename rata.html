@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducing rāta — Telugu, at Your Fingertips | Coming Soon to iPhone &amp; iPad</title>
-    <meta name="description" content="Introducing rāta, an iPhone and iPad app for learning to write Telugu, one word at a time. Trace words with your finger or Apple Pencil, get instant feedback, and follow lessons that adapt to you. Join the waitlist.">
+    <meta name="description" content="Introducing rāta, an iPhone and iPad app for learning to write Telugu, one word at a time. Write words with your finger or Apple Pencil, get instant feedback, and follow lessons that adapt to you. Join the waitlist.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="rata.css">
 </head>
 <body>
-    <a href="index.html" class="rata-back-link">← Vindhya Banda</a>
-
     <main>
         <!-- Hero -->
         <section class="rata-hero">
             <div class="rata-hero-glow" aria-hidden="true"></div>
+            <div class="rata-hero-blobs" aria-hidden="true">
+                <span class="rata-blob rata-blob-saffron"></span>
+                <span class="rata-blob rata-blob-teal"></span>
+                <span class="rata-blob rata-blob-terracotta"></span>
+                <span class="rata-blob rata-blob-gold"></span>
+            </div>
             <div class="rata-container rata-hero-inner">
                 <div class="rata-app-icon fade-in" aria-hidden="true">
                     <span class="rata-app-icon-letter">అ</span>
                 </div>
 
                 <h1 class="rata-hero-title fade-in">rāta</h1>
-                <p class="rata-hero-tagline fade-in">Telugu, at your fingertips.</p>
+                <p class="rata-hero-tagline fade-in"><span class="rata-tagline-ink">Telugu, at your fingertips.</span></p>
                 <p class="rata-hero-sub fade-in">
-                    Trace Telugu with your finger or Apple Pencil, get instant feedback as you
-                    practice, and build your skills with lessons that adapt to you.
+                    <span class="rata-hero-sub-line">Practice writing Telugu on your iPhone/iPad (Apple Pencil compatible), from guided strokes to writing on your own.</span>
+                    <span class="rata-hero-sub-line">Get instant feedback and build your skills with lessons that adapt to you.</span>
                 </p>
 
                 <form class="rata-waitlist-form fade-in" id="rata-waitlist-form" novalidate>
@@ -78,22 +82,18 @@
                 <h2 class="rata-section-title fade-in">More than memorizing the alphabet.</h2>
                 <div class="rata-features-grid">
                     <div class="rata-feature-card fade-in" style="--rata-accent: #E8864A;">
-                        <div class="rata-feature-icon">✍️</div>
                         <h3>Learn by writing</h3>
-                        <p>Get hands-on with Telugu script. Trace letters, words, sentences at your own pace, building familiarity with every stroke.</p>
+                        <p>Get hands-on with Telugu script. Follow guided strokes, then write letters, words, and sentences on your own, building confidence with every stroke.</p>
                     </div>
                     <div class="rata-feature-card fade-in" style="--rata-accent: #2F8C82;">
-                        <div class="rata-feature-icon">✨</div>
                         <h3>Feedback as you write</h3>
-                        <p>Know which characters you&rsquo;ve mastered and which need a little more practice, right when you need it.</p>
+                        <p>Know which characters and words you&rsquo;ve mastered and which need a little more practice, right when you need it.</p>
                     </div>
                     <div class="rata-feature-card fade-in" style="--rata-accent: #C9574E;">
-                        <div class="rata-feature-icon">🌱</div>
                         <h3>A learning path that grows with you</h3>
                         <p>Practice the characters you find tricky, revisit what you&rsquo;ve learned, and gradually work your way toward more complex words.</p>
                     </div>
                     <div class="rata-feature-card fade-in" style="--rata-accent: #D4A017;">
-                        <div class="rata-feature-icon">💬</div>
                         <h3>Understand meaning and applicability</h3>
                         <p>Explore Telugu alongside their English meanings and romanized pronunciations, connecting the script you write to the language you use.</p>
                     </div>
@@ -129,7 +129,7 @@
     </main>
 
     <footer class="rata-footer">
-        <p>&copy; 2026 rāta.</p>
+        <p>&copy; 2026 Vindhya Banda</p>
     </footer>
 
     <script src="rata.js"></script>

@@ -55,31 +55,6 @@ img, svg {
     border: 0;
 }
 
-/* ===== BACK LINK ===== */
-.rata-back-link {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--rata-text-light);
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 8px 16px;
-    border-radius: 999px;
-    text-decoration: none;
-    box-shadow: 0 2px 10px rgba(43, 36, 32, 0.08);
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.rata-back-link:hover {
-    color: var(--rata-saffron);
-    transform: translateX(-2px);
-}
-
 /* ===== HERO ===== */
 .rata-hero {
     position: relative;
@@ -100,6 +75,107 @@ img, svg {
     height: 900px;
     background: radial-gradient(circle, rgba(232, 134, 74, 0.14) 0%, rgba(47, 140, 130, 0.08) 45%, transparent 70%);
     pointer-events: none;
+}
+
+/* Slowly drifting, blurred color blobs behind the hero content. */
+.rata-hero-blobs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    filter: blur(70px);
+}
+
+.rata-blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.35;
+    will-change: transform;
+}
+
+.rata-blob-saffron {
+    width: 520px;
+    height: 520px;
+    top: -10%;
+    left: -8%;
+    background: var(--rata-saffron);
+    animation: rata-blob-drift-a 22s ease-in-out infinite alternate;
+}
+
+.rata-blob-teal {
+    width: 460px;
+    height: 460px;
+    bottom: -12%;
+    right: -6%;
+    background: var(--rata-teal);
+    opacity: 0.25;
+    animation: rata-blob-drift-b 26s ease-in-out infinite alternate;
+}
+
+.rata-blob-terracotta {
+    width: 380px;
+    height: 380px;
+    top: 30%;
+    right: 12%;
+    background: var(--rata-terracotta);
+    opacity: 0.22;
+    animation: rata-blob-drift-c 30s ease-in-out infinite alternate;
+}
+
+.rata-blob-gold {
+    width: 340px;
+    height: 340px;
+    bottom: 5%;
+    left: 15%;
+    background: var(--rata-gold);
+    opacity: 0.25;
+    animation: rata-blob-drift-d 24s ease-in-out infinite alternate;
+}
+
+@keyframes rata-blob-drift-a {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(18vw, 12vh) scale(1.15); }
+    100% { transform: translate(6vw, 30vh) scale(0.95); }
+}
+
+@keyframes rata-blob-drift-b {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-20vw, -14vh) scale(1.1); }
+    100% { transform: translate(-8vw, -32vh) scale(0.9); }
+}
+
+@keyframes rata-blob-drift-c {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-24vw, 10vh) scale(0.85); }
+    100% { transform: translate(-10vw, -18vh) scale(1.2); }
+}
+
+@keyframes rata-blob-drift-d {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(22vw, -16vh) scale(1.2); }
+    100% { transform: translate(34vw, 4vh) scale(0.9); }
+}
+
+@media (max-width: 600px) {
+    .rata-blob-saffron { width: 320px; height: 320px; }
+    .rata-blob-teal { width: 280px; height: 280px; }
+    .rata-blob-terracotta { width: 240px; height: 240px; }
+    .rata-blob-gold { width: 220px; height: 220px; }
+}
+
+/* Reduced-motion visitors still get a gentle, stationary color "breathing" instead of drifting blobs. */
+@media (prefers-reduced-motion: reduce) {
+    .rata-blob {
+        animation: rata-blob-breathe 10s ease-in-out infinite alternate;
+    }
+
+    .rata-blob-teal { animation-delay: -2.5s; }
+    .rata-blob-terracotta { animation-delay: -5s; }
+    .rata-blob-gold { animation-delay: -7.5s; }
+}
+
+@keyframes rata-blob-breathe {
+    0%   { opacity: 0.12; }
+    100% { opacity: 0.4; }
 }
 
 .rata-hero-inner {
@@ -128,7 +204,8 @@ img, svg {
     color: #fff;
 }
 
-/* Only the "rāta" wordmark uses the display serif; everything else is DM Sans. */
+/* The "rāta" wordmark uses the display serif, and the tagline and section
+   titles use a handwritten script; everything else is DM Sans. */
 .rata-hero-title {
     font-family: 'Newsreader', serif;
     font-size: 3.2rem;
@@ -139,16 +216,61 @@ img, svg {
 }
 
 .rata-hero-tagline {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-family: 'Caveat', cursive;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.2;
     color: var(--rata-terracotta);
     margin-bottom: 18px;
 }
 
+/* "Writes" the tagline left to right once on load: a soft-edged mask sweeps
+   across the text with brief pauses between words, like a pen lifting. */
+.rata-tagline-ink {
+    display: inline-block;
+    padding: 0 0.15em;
+    -webkit-mask-image: linear-gradient(to right, #000 45%, transparent 55%);
+    mask-image: linear-gradient(to right, #000 45%, transparent 55%);
+    -webkit-mask-size: 220% 100%;
+    mask-size: 220% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation: rata-tagline-write 2.6s linear 0.6s both;
+}
+
+@keyframes rata-tagline-write {
+    0%   { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    /* "Telugu," */
+    26%  { -webkit-mask-position: 72% 0;  mask-position: 72% 0; }
+    32%  { -webkit-mask-position: 70% 0;  mask-position: 70% 0; }
+    /* "at" */
+    42%  { -webkit-mask-position: 60% 0;  mask-position: 60% 0; }
+    46%  { -webkit-mask-position: 58% 0;  mask-position: 58% 0; }
+    /* "your" */
+    60%  { -webkit-mask-position: 42% 0;  mask-position: 42% 0; }
+    64%  { -webkit-mask-position: 40% 0;  mask-position: 40% 0; }
+    /* "fingertips." */
+    100% { -webkit-mask-position: 0% 0;   mask-position: 0% 0; }
+}
+
 .rata-hero-sub {
+    --rata-sub-width: min(920px, calc(100vw - 64px));
+    width: var(--rata-sub-width);
+    margin-left: 50%;
+    translate: -50% 0;
     font-size: 1.05rem;
     color: var(--rata-text-light);
     margin-bottom: 20px;
+    text-wrap: balance;
+}
+
+/* The subtitle extends past the 680px hero column so it stays on two lines
+   wherever possible: one sentence per line on wide screens, and the whole
+   paragraph balanced across two lines on mid-size screens. */
+@media (min-width: 960px) {
+    .rata-hero-sub-line {
+        display: block;
+    }
 }
 
 .rata-emphasis {
@@ -252,8 +374,10 @@ img, svg {
 
 .rata-section-title {
     text-align: center;
-    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+    font-size: 2.8rem;
     font-weight: 700;
+    line-height: 1.15;
     color: var(--rata-text);
     margin-bottom: 48px;
 }
@@ -422,51 +546,97 @@ img, svg {
     gap: 24px;
 }
 
-.rata-feature-card {
+/* Hover motion uses the standalone `translate`/`scale` properties so it doesn't
+   fight the scroll fade-in, which animates `transform`. */
+.rata-features-grid .rata-feature-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     background: #fff;
     border-radius: 18px;
     padding: 28px;
-    border-top: 4px solid var(--rata-accent, var(--rata-saffron));
     box-shadow: 0 8px 24px rgba(43, 36, 32, 0.06);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        translate 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        scale 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s ease;
 }
 
-.rata-feature-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 32px rgba(43, 36, 32, 0.12);
+/* Soft accent-colored glow that blooms from the bottom-right corner on hover. */
+.rata-feature-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+        circle at 100% 100%,
+        color-mix(in srgb, var(--rata-accent, var(--rata-saffron)) 18%, transparent) 0%,
+        transparent 65%
+    );
+    opacity: 0;
+    transform: scale(0.6);
+    transform-origin: 100% 100%;
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rata-features-grid .rata-feature-card:hover {
+    translate: 0 -8px;
+    scale: 1.02;
+    box-shadow: 0 20px 40px color-mix(in srgb, var(--rata-accent, var(--rata-saffron)) 22%, transparent);
+}
+
+.rata-feature-card:hover::before {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Stagger each card's scroll-triggered fade-in so they cascade in one after
-   another instead of all appearing at once. */
-.rata-features-grid .fade-in:nth-child(1) { transition-delay: 0s; }
-.rata-features-grid .fade-in:nth-child(2) { transition-delay: 0.1s; }
-.rata-features-grid .fade-in:nth-child(3) { transition-delay: 0.2s; }
-.rata-features-grid .fade-in:nth-child(4) { transition-delay: 0.3s; }
-
-.rata-feature-icon {
-    font-size: 1.8rem;
-    margin-bottom: 14px;
-    display: inline-block;
-    animation: rata-icon-float 3.6s ease-in-out infinite;
-}
-
-.rata-features-grid .fade-in:nth-child(2) .rata-feature-icon { animation-delay: -0.9s; }
-.rata-features-grid .fade-in:nth-child(3) .rata-feature-icon { animation-delay: -1.8s; }
-.rata-features-grid .fade-in:nth-child(4) .rata-feature-icon { animation-delay: -2.7s; }
-
-.rata-feature-card:hover .rata-feature-icon {
-    animation-play-state: paused;
-}
-
-@keyframes rata-icon-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
+   another instead of all appearing at once. Hover transitions stay instant. */
+.rata-features-grid .fade-in:nth-child(1) { transition-delay: 0s, 0s, 0s, 0s, 0s; }
+.rata-features-grid .fade-in:nth-child(2) { transition-delay: 0.1s, 0.1s, 0s, 0s, 0s; }
+.rata-features-grid .fade-in:nth-child(3) { transition-delay: 0.2s, 0.2s, 0s, 0s, 0s; }
+.rata-features-grid .fade-in:nth-child(4) { transition-delay: 0.3s, 0.3s, 0s, 0s, 0s; }
 
 .rata-feature-card h3 {
+    position: relative;
+    display: inline-block;
     font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
     color: var(--rata-text);
+    transition: color 0.3s ease;
+}
+
+/* Accent underline that draws in beneath the heading on hover. */
+.rata-feature-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--rata-accent, var(--rata-saffron));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rata-feature-card:hover h3 {
+    color: var(--rata-accent, var(--rata-saffron));
+}
+
+.rata-feature-card:hover h3::after {
+    transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rata-features-grid .rata-feature-card:hover {
+        translate: none;
+        scale: none;
+    }
 }
 
 .rata-feature-card p {
@@ -515,7 +685,7 @@ img, svg {
     }
 
     .rata-hero-tagline {
-        font-size: 1.1rem;
+        font-size: 1.75rem;
     }
 
     .rata-features-grid {
