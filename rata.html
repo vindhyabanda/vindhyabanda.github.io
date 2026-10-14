@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing rāta — Telugu, at Your Fingertips | Coming Soon to iPhone &amp; iPad</title>
+    <meta name="description" content="Introducing rāta, an iPhone and iPad app for learning to write Telugu, one word at a time. Trace words with your finger or Apple Pencil, get instant feedback, and follow lessons that adapt to you. Join the waitlist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rata.css">
+</head>
+<body>
+    <a href="index.html" class="rata-back-link">← Vindhya Banda</a>
+
+    <main>
+        <!-- Hero -->
+        <section class="rata-hero">
+            <div class="rata-hero-glow" aria-hidden="true"></div>
+            <div class="rata-container rata-hero-inner">
+                <div class="rata-app-icon fade-in" aria-hidden="true">
+                    <span class="rata-app-icon-letter">అ</span>
+                </div>
+
+                <h1 class="rata-hero-title fade-in">rāta</h1>
+                <p class="rata-hero-tagline fade-in">Telugu, at your fingertips.</p>
+                <p class="rata-hero-sub fade-in">
+                    Trace Telugu with your finger or Apple Pencil, get instant feedback as you
+                    practice, and build your skills with lessons that adapt to you.
+                </p>
+
+                <form class="rata-waitlist-form fade-in" id="rata-waitlist-form" novalidate>
+                    <label for="rata-email" class="rata-sr-only">Email address</label>
+                    <input
+                        type="email"
+                        id="rata-email"
+                        name="email"
+                        class="rata-email-input"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                    <button type="submit" class="rata-btn rata-btn-primary" id="rata-waitlist-submit">
+                        Join the Waitlist
+                    </button>
+                </form>
+                <p class="rata-form-message" id="rata-form-message" role="status" aria-live="polite"></p>
+                <p class="rata-caption rata-caption-italic fade-in">Coming soon to iPhone and iPad.</p>
+            </div>
+        </section>
+
+        <!-- Preview / Mockup -->
+        <section class="rata-section rata-preview">
+            <div class="rata-container">
+                <div class="rata-preview-visual fade-in" aria-hidden="true">
+                    <div class="rata-phone-mockup">
+                        <div class="rata-phone-notch"></div>
+                        <div class="rata-phone-screen">
+                            <div class="rata-trace-stage">
+                                <div class="rata-trace-letter-wrap">
+                                    <span class="rata-trace-letter rata-trace-letter-guide" aria-hidden="true">అమ్మ</span>
+                                    <span class="rata-trace-letter rata-trace-letter-ink">అమ్మ</span>
+                                    <svg class="rata-trace-line" viewBox="0 0 440 230" preserveAspectRatio="none">
+                                        <path pathLength="100" d="M 16 176 C 54 122, 92 122, 116 162 C 140 203, 178 203, 203 162 C 227 122, 265 122, 289 162 C 313 203, 351 203, 375 162 C 394 132, 405 119, 416 108" />
+                                    </svg>
+                                    <span class="rata-trace-pen" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="rata-section rata-features">
+            <div class="rata-container">
+                <h2 class="rata-section-title fade-in">More than memorizing the alphabet.</h2>
+                <div class="rata-features-grid">
+                    <div class="rata-feature-card fade-in" style="--rata-accent: #E8864A;">
+                        <div class="rata-feature-icon">✍️</div>
+                        <h3>Learn by writing</h3>
+                        <p>Get hands-on with Telugu script. Trace letters, words, sentences at your own pace, building familiarity with every stroke.</p>
+                    </div>
+                    <div class="rata-feature-card fade-in" style="--rata-accent: #2F8C82;">
+                        <div class="rata-feature-icon">✨</div>
+                        <h3>Feedback as you write</h3>
+                        <p>Know which characters you&rsquo;ve mastered and which need a little more practice, right when you need it.</p>
+                    </div>
+                    <div class="rata-feature-card fade-in" style="--rata-accent: #C9574E;">
+                        <div class="rata-feature-icon">🌱</div>
+                        <h3>A learning path that grows with you</h3>
+                        <p>Practice the characters you find tricky, revisit what you&rsquo;ve learned, and gradually work your way toward more complex words.</p>
+                    </div>
+                    <div class="rata-feature-card fade-in" style="--rata-accent: #D4A017;">
+                        <div class="rata-feature-icon">💬</div>
+                        <h3>Understand meaning and applicability</h3>
+                        <p>Explore Telugu alongside their English meanings and romanized pronunciations, connecting the script you write to the language you use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist CTA (repeat) -->
+        <section class="rata-section rata-cta">
+            <div class="rata-container rata-cta-inner">
+                <h2 class="rata-section-title fade-in">Your Telugu journey starts here.</h2>
+                <p class="rata-cta-sub fade-in">Whether you&rsquo;re reconnecting with your roots, learning your family&rsquo;s language, or starting something new, rāta helps you turn practice into progress.</p>
+
+                <form class="rata-waitlist-form fade-in" id="rata-waitlist-form-2" novalidate>
+                    <label for="rata-email-2" class="rata-sr-only">Email address</label>
+                    <input
+                        type="email"
+                        id="rata-email-2"
+                        name="email"
+                        class="rata-email-input"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                    <button type="submit" class="rata-btn rata-btn-primary" id="rata-waitlist-submit-2">
+                        Get Early Access
+                    </button>
+                </form>
+                <p class="rata-form-message" id="rata-form-message-2" role="status" aria-live="polite"></p>
+                <p class="rata-caption fade-in">Be among the first to experience rāta.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rata-footer">
+        <p>&copy; 2026 rāta.</p>
+    </footer>
+
+    <script src="rata.js"></script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #2B2420;
+    background: #FFF9F2;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== COLOR VARIABLES ===== */
+:root {
+    --rata-saffron: #E8864A;
+    --rata-teal: #2F8C82;
+    --rata-terracotta: #C9574E;
+    --rata-gold: #D4A017;
+    --rata-cream: #FFF9F2;
+    --rata-cream-alt: #FDEFDF;
+    --rata-text: #2B2420;
+    --rata-text-light: #5A4F46;
+}
+
+.rata-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.rata-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ===== BACK LINK ===== */
+.rata-back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--rata-text-light);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(43, 36, 32, 0.08);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rata-back-link:hover {
+    color: var(--rata-saffron);
+    transform: translateX(-2px);
+}
+
+/* ===== HERO ===== */
+.rata-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 80px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #FFF9F2 0%, #FDEFDF 100%);
+}
+
+.rata-hero-glow {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(232, 134, 74, 0.14) 0%, rgba(47, 140, 130, 0.08) 45%, transparent 70%);
+    pointer-events: none;
+}
+
+.rata-hero-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 680px;
+}
+
+.rata-app-icon {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 28px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, var(--rata-saffron) 0%, var(--rata-terracotta) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 36px rgba(201, 87, 78, 0.3);
+}
+
+.rata-app-icon-letter {
+    font-family: 'Noto Sans Telugu', 'DM Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Only the "rāta" wordmark uses the display serif; everything else is DM Sans. */
+.rata-hero-title {
+    font-family: 'Newsreader', serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--rata-text);
+    margin-bottom: 14px;
+}
+
+.rata-hero-tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--rata-terracotta);
+    margin-bottom: 18px;
+}
+
+.rata-hero-sub {
+    font-size: 1.05rem;
+    color: var(--rata-text-light);
+    margin-bottom: 20px;
+}
+
+.rata-emphasis {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--rata-text);
+    margin-bottom: 32px;
+}
+
+.rata-caption {
+    font-size: 0.9rem;
+    color: var(--rata-text-light);
+    margin-top: 6px;
+}
+
+.rata-caption-italic {
+    font-style: italic;
+}
+
+/* ===== WAITLIST FORM ===== */
+.rata-waitlist-form {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.rata-email-input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 999px;
+    border: 2px solid rgba(43, 36, 32, 0.12);
+    background: #fff;
+    min-width: 280px;
+    flex: 1 1 280px;
+    max-width: 360px;
+    color: var(--rata-text);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rata-email-input:focus {
+    outline: none;
+    border-color: var(--rata-saffron);
+    box-shadow: 0 0 0 4px rgba(232, 134, 74, 0.15);
+}
+
+.rata-email-input.rata-input-error {
+    border-color: var(--rata-terracotta);
+    box-shadow: 0 0 0 4px rgba(201, 87, 78, 0.12);
+}
+
+.rata-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    white-space: nowrap;
+}
+
+.rata-btn-primary {
+    color: #fff;
+    background: linear-gradient(135deg, var(--rata-saffron) 0%, var(--rata-terracotta) 100%);
+    box-shadow: 0 10px 24px rgba(201, 87, 78, 0.28);
+}
+
+.rata-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(201, 87, 78, 0.35);
+}
+
+.rata-btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.rata-form-message {
+    min-height: 1.4em;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.rata-form-message.rata-success {
+    color: var(--rata-teal);
+}
+
+.rata-form-message.rata-error {
+    color: var(--rata-terracotta);
+}
+
+/* ===== SECTIONS ===== */
+.rata-section {
+    padding: 90px 0;
+}
+
+.rata-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rata-text);
+    margin-bottom: 48px;
+}
+
+/* ===== PREVIEW / MOCKUP ===== */
+.rata-preview {
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+.rata-preview-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.rata-phone-mockup {
+    width: 600px;
+    max-width: 94vw;
+    border-radius: 44px;
+    background: #1E1A17;
+    padding: 14px;
+    box-shadow: 0 30px 60px rgba(43, 36, 32, 0.25);
+    position: relative;
+}
+
+.rata-phone-notch {
+    width: 20px;
+    height: 84px;
+    background: #1E1A17;
+    border-radius: 0 14px 14px 0;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.rata-phone-screen {
+    background: linear-gradient(180deg, #fff 0%, #FFF6EC 100%);
+    border-radius: 32px;
+    padding: 28px 40px 28px 60px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rata-trace-stage {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rata-trace-letter-wrap {
+    position: relative;
+    width: 440px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rata-trace-letter {
+    font-family: 'Noto Sans Telugu', 'DM Sans', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+}
+
+/* Faint guide copy of the word, always visible underneath the "ink". */
+.rata-trace-letter-guide {
+    color: rgba(43, 36, 32, 0.12);
+}
+
+/* Gradient "ink" copy that progressively reveals left-to-right, in step with
+   the trace line and pen below so the word looks hand-written. */
+.rata-trace-letter-ink {
+    background: linear-gradient(135deg, var(--rata-saffron) 0%, var(--rata-terracotta) 60%, var(--rata-teal) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    clip-path: inset(0 100% 0 0);
+    animation: rata-letter-reveal 4.2s ease-in-out infinite;
+}
+
+/* Wavy "pen stroke" line that draws itself beneath the word, matched 1:1 to
+   the pen dot's motion via a shared path and the same animation timing. */
+.rata-trace-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.rata-trace-line path {
+    fill: none;
+    stroke: var(--rata-saffron);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    animation: rata-line-draw 4.2s ease-in-out infinite;
+}
+
+.rata-trace-pen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border-radius: 50%;
+    background: var(--rata-saffron);
+    box-shadow: 0 0 0 5px rgba(232, 134, 74, 0.2);
+    offset-path: path("M 16 176 C 54 122, 92 122, 116 162 C 140 203, 178 203, 203 162 C 227 122, 265 122, 289 162 C 313 203, 351 203, 375 162 C 394 132, 405 119, 416 108");
+    offset-rotate: 0deg;
+    animation: rata-pen-trace 4.2s ease-in-out infinite;
+}
+
+
+@keyframes rata-letter-reveal {
+    0% { clip-path: inset(0 100% 0 0); opacity: 1; }
+    50% { clip-path: inset(0 0% 0 0); opacity: 1; }
+    82% { clip-path: inset(0 0% 0 0); opacity: 1; }
+    90% { clip-path: inset(0 0% 0 0); opacity: 0; }
+    91% { clip-path: inset(0 100% 0 0); opacity: 0; }
+    100% { clip-path: inset(0 100% 0 0); opacity: 1; }
+}
+
+@keyframes rata-line-draw {
+    0% { stroke-dashoffset: 100; opacity: 1; }
+    50% { stroke-dashoffset: 0; opacity: 1; }
+    82% { stroke-dashoffset: 0; opacity: 1; }
+    90% { stroke-dashoffset: 0; opacity: 0; }
+    91% { stroke-dashoffset: 100; opacity: 0; }
+    100% { stroke-dashoffset: 100; opacity: 1; }
+}
+
+@keyframes rata-pen-trace {
+    0% { offset-distance: 0%; opacity: 1; }
+    50% { offset-distance: 100%; opacity: 1; }
+    82% { offset-distance: 100%; opacity: 1; }
+    90% { offset-distance: 100%; opacity: 0; }
+    91% { offset-distance: 0%; opacity: 0; }
+    100% { offset-distance: 0%; opacity: 1; }
+}
+
+/* ===== FEATURES ===== */
+.rata-features {
+    background: var(--rata-cream-alt);
+}
+
+.rata-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.rata-feature-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    border-top: 4px solid var(--rata-accent, var(--rata-saffron));
+    box-shadow: 0 8px 24px rgba(43, 36, 32, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.rata-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(43, 36, 32, 0.12);
+}
+
+/* Stagger each card's scroll-triggered fade-in so they cascade in one after
+   another instead of all appearing at once. */
+.rata-features-grid .fade-in:nth-child(1) { transition-delay: 0s; }
+.rata-features-grid .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.rata-features-grid .fade-in:nth-child(3) { transition-delay: 0.2s; }
+.rata-features-grid .fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+.rata-feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+    display: inline-block;
+    animation: rata-icon-float 3.6s ease-in-out infinite;
+}
+
+.rata-features-grid .fade-in:nth-child(2) .rata-feature-icon { animation-delay: -0.9s; }
+.rata-features-grid .fade-in:nth-child(3) .rata-feature-icon { animation-delay: -1.8s; }
+.rata-features-grid .fade-in:nth-child(4) .rata-feature-icon { animation-delay: -2.7s; }
+
+.rata-feature-card:hover .rata-feature-icon {
+    animation-play-state: paused;
+}
+
+@keyframes rata-icon-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.rata-feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--rata-text);
+}
+
+.rata-feature-card p {
+    font-size: 0.95rem;
+    color: var(--rata-text-light);
+}
+
+/* ===== CTA ===== */
+.rata-cta-inner {
+    text-align: center;
+    max-width: 680px;
+}
+
+.rata-cta-sub {
+    color: var(--rata-text-light);
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    text-wrap: pretty;
+}
+
+/* ===== FOOTER ===== */
+.rata-footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.85rem;
+    color: var(--rata-text-light);
+    background: var(--rata-cream-alt);
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .rata-hero-title {
+        font-size: 2.4rem;
+    }
+
+    .rata-hero-tagline {
+        font-size: 1.1rem;
+    }
+
+    .rata-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rata-waitlist-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rata-email-input {
+        max-width: none;
+        min-width: 0;
+        /* Reset the row-layout flex-basis (280px) so it doesn't get read as
+           a height once the form stacks into a column on mobile. */
+        flex: 1 1 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .rata-btn {
+        width: 100%;
+    }
+
+    /* Scale the whole mockup uniformly rather than resizing its children,
+       since the trace line/pen share hardcoded pixel coordinates that must
+       stay in proportion to the letter wrap. */
+    .rata-preview-visual {
+        margin: -50px 0;
+    }
+
+    .rata-phone-mockup {
+        transform: scale(0.72);
+    }
+}
